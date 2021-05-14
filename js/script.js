@@ -22,7 +22,7 @@ function portfolioload() {
    element2.classList.add("portfolio-content");
        element2.innerHTML = 'Hello!  I\'m Sobhraj Chhetri.'
        element2.innerHTML += '<div class="details"><br/> -  Certified AEM Developer based in India.'
-       + '<br/> - Certified AEM Architect <br/> - Certified AEM DevOps Specialist<br/>- ML/AI Enthusiast<br/>- Freestyle Mountain Bike Rider</div>';
+       + '<br/> - Certified AEM Architect <br/> - Certified AEM DevOps Specialist<br/>- ML/AI Enthusiast<br/>- Freeride Mountain Bike Rider</div>';
 //  }
   setTimeout(portfolioload, speed2);
 }
