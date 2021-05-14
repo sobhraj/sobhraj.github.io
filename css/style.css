@@ -11,15 +11,13 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
-.main-content{
-
-}
 
 .welcome-content {
   color: #C0C0C0;
   font-size: 40px;
   font-family: 'Caveat', cursive;
 }
+
 .portfolio-content {
   position: relative;
   top: 350px;
