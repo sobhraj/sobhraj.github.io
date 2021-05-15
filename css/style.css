@@ -8,8 +8,21 @@ body {
   background-image: url("../images/bg.jpeg");
   background-color: #8E1326;
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   background-repeat: no-repeat;
-  position: relative;
+  overflow-y: scroll; /* Add the ability to scroll */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .welcome-content {
@@ -20,7 +33,7 @@ body {
 
 .portfolio-content {
   position: relative;
-  top: 350px;
+  top: 370px;
   text-align : right;
   color: #C0C0C0;
   /*color: #8E1326;
@@ -47,3 +60,18 @@ img {
  width: 100%;
  object-fit: contain;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
