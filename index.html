@@ -18,28 +18,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
-    <!-- CSS
-      ================================================== -->
-    <!-- Main Stylesheet -->
+
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="welcome()">
-<!-- Content
-  ==================================== -->
-<div id="main-content" class="main-content">
-    <div id="content"></div>
-    <div class="body"></div>
-<!--    <div class="logo"><img src="./images/logo.png"/></div>-->
-    <div id="intro"></div>
+<body id="body" onload="init()">
+<div id="main-content">
+    <div id="firstbanner" class="firstbanner"></div> <!--firstbanner><!-->
+    <div id="content"></div><!--Greeting><!-->
+    <div id="intro"></div><!--Intro about me <!-->
+    <div id="more_details" class="more_details"><!--scroll for more Details <!-->
+        <div id="aboutinnertext" class="aboutinnertext">Scroll down for more about me</div>
+    </div>
+    <div id="secondbanner" class="secondbanner">second </div> <!--secondbanner><!-->
+
+    <div id="firstframe" class="yellowcircle"></div>
+    <div id="secondframe" class="bluesquare"></div>
+    <div id="thirdframe" class="greenpentagon"></div>
 </div>
 
-<!-- End Content
-  ==================================== -->
 <!--
     Custom js
 =====================================-->
-
 <script src="js/script.js"></script>
+<script>
+
+window.addEventListener("DOMContentLoaded", scrollLoop, false);
+
+    var firstbanner = document.querySelector("#firstbanner");
+    var secondbanner = document.querySelector("#secondbanner");
+    var yellowcircle = document.querySelector("#firstframe");
+    var bluesquare = document.querySelector("#secondframe");
+    var greenpentagon = document.querySelector("#thirdframe");
+
+    var xScrollPosition;
+    var yScrollPosition;
+
+function scrollLoop(e) {
+    xScrollPosition = window.scrollX;
+    yScrollPosition = window.scrollY;
+
+    setTranslate(0,yScrollPosition * -0.5, firstbanner);
+    setTranslate(0,yScrollPosition * -0.75, secondbanner);
+    setTranslate(0,yScrollPosition * -0.2, yellowcircle);
+    setTranslate(0,yScrollPosition * -1.5, bluesquare);
+    setTranslate(0,yScrollPosition * .5, greenpentagon);
+
+    requestAnimationFrame(scrollLoop);
+}
+
+function setTranslate(xPos, yPos, el) {
+ el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0";
+}
+
+
+</script>
 
 </body>
 </html>
